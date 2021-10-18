@@ -1,0 +1,11 @@
+<h2 [ngClass]="isWeekend?'isWeekendColor':'normalDayColor'" [ngStyle]="greetingStyles" >{{message}}</h2>
+
+
+    <ul>
+      <li *ngFor="let color of colors;let i=index" (click)="removeColor(i)">{{color}}</li>
+    </ul>
+
+    <p id="idLabel">You have removed the color: {{removedColor}} at {{removedIndex}} index</p>
+
+<button (click)="updateMessage('Welcome To Angular')" class="btn btn-primary">Update Message</button>
+<button (click)="changeFontSize(22)" class="btn btn-primary ml-2">Change Font Size</button>
